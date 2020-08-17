@@ -17,4 +17,16 @@ pipeline {
 			}
 		}		
 	}	
+	post {
+		always {
+			echo "always execute this"
+		}
+		success {
+			echo "execute this when build success"
+		}
+		failure {
+			echo "execute this when build faile"
+		}
+		//unchanged  //unstable
+	}
 }
